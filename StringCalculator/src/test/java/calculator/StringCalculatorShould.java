@@ -12,6 +12,9 @@ class StringCalculatorShould {
 	public final void whenEmptyStringIsUsedThenReturnValueIs0() {
 	    Assert.assertEquals(0, StringCalculator.add(""));
 	}
-
+	@Test
+	public final void whenOneNumberIsUsedThenReturnValueIsThatSameNumber() {
+	    Assert.assertEquals(3, StringCalculator.add("3"));
+	}
   
 }
