@@ -16,9 +16,10 @@ public class StringCalculator {
             	 if (!number.trim().isEmpty()) { 
             		 int numberInt = Integer.parseInt(number.trim());
                      if (numberInt < 0) {
-                         negativeNumbers.add(numberInt);
+                             negativeNumbers.add(numberInt);
+                     } else if (numberInt <= 1000) {
+                             returnValue += numberInt;
                      }
-                     returnValue += numberInt;
                  }
              }
 //         }
