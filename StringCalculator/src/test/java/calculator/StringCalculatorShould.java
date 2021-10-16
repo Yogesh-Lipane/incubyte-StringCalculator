@@ -28,4 +28,14 @@ class StringCalculatorShould {
 	    public final void newLineBetweenNumbers() {
 	        Assert.assertEquals(6, StringCalculator.add("1\n2,3"));
 	 }
+	 @Test
+	 public final void whenNegativeNumberIsUsedThenRuntimeExceptionIsThrown() {
+		 RuntimeException exception = null;
+		    try {
+		        StringCalculator.add("3,-6,15,46,33");
+		    } catch (RuntimeException e) {
+		        exception = e;
+		    }
+	 }
+	 
 }
