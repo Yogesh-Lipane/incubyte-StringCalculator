@@ -2,15 +2,16 @@ package test.java.calculator;
 import main.java.calculator.*;
 import org.junit.jupiter.api.Test;
 
+import junit.framework.Assert;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StringCalculatorShould {
 
-    @Test
-    void empty_string_should_return_0() {
-        StringCalculator stringCalculator = new StringCalculator();
-        assertEquals(0, stringCalculator.add(""));
-    }
+	@Test
+	public final void whenEmptyStringIsUsedThenReturnValueIs0() {
+	    Assert.assertEquals(0, StringCalculator.add(""));
+	}
 
   
 }

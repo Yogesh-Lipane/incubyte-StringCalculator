@@ -2,8 +2,19 @@ package main.java.calculator;
 
 public class StringCalculator {
 
-    public int add(String input) {
-        return 0;
+    public static int add(String numbers) {
+    	 int returnValue = 0;
+    	 String[] numbersArray = numbers.split(",");
+         if (numbersArray.length > 2) {
+             throw new RuntimeException("Up to 2 numbers separated by comma (,) are allowed");
+         } else {
+             for (String number : numbersArray) {
+            	 if (!number.trim().isEmpty()) { 
+                     returnValue += Integer.parseInt(number);
+                 }
+             }
+         }
+         return returnValue;
     }
 
 }
